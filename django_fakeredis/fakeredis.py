@@ -7,7 +7,7 @@ from django.test import override_settings
 server = fakeredis.FakeServer()
 
 
-def get_fake_redis():
+def get_fake_redis(_):
     """ mock the same redis connection """
     return fakeredis.FakeStrictRedis(server=server)
 
